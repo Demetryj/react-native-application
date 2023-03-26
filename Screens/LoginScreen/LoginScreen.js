@@ -79,6 +79,7 @@ export const LoginScreen = () => {
                   style={{
                     ...styles.input,
                     borderColor: isFocused.email ? "#FF6C00" : "#E8E8E8",
+                    marginBottom: 16,
                   }}
                   placeholder="Email"
                   value={email}
@@ -94,6 +95,7 @@ export const LoginScreen = () => {
                     style={{
                       ...styles.input,
                       borderColor: isFocused.password ? "#FF6C00" : "#E8E8E8",
+                      marginBottom: 16,
                     }}
                     maxLength={10}
                     secureTextEntry={isShowPassword}
@@ -113,7 +115,9 @@ export const LoginScreen = () => {
                     style={styles.showBtn}
                     onPress={() => setIsShowPassword((prevState) => !prevState)}
                   >
-                    <Text style={styles.showText}>Show</Text>
+                    <Text style={styles.showText}>
+                      {isShowPassword ? "Show" : "Hide"}
+                    </Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -130,7 +134,7 @@ export const LoginScreen = () => {
 
                   <TouchableOpacity activeOpacity={0.8}>
                     <Text style={styles.text}>
-                      Don't have an account? Register.
+                      Don't have an account? Sign up.
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -170,7 +174,6 @@ const styles = StyleSheet.create({
   },
 
   inputsWrapper: {
-    gap: 16,
     width: "100%",
   },
 
