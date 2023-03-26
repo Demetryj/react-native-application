@@ -96,6 +96,7 @@ export const RegistrationScreen = () => {
                   style={{
                     ...styles.input,
                     borderColor: isFocused.login ? "#FF6C00" : "#E8E8E8",
+                    marginBottom: 16,
                   }}
                   placeholder="Login"
                   name="login"
@@ -111,6 +112,7 @@ export const RegistrationScreen = () => {
                   style={{
                     ...styles.input,
                     borderColor: isFocused.email ? "#FF6C00" : "#E8E8E8",
+                    marginBottom: 16,
                   }}
                   placeholder="Email"
                   value={email}
@@ -157,12 +159,12 @@ export const RegistrationScreen = () => {
                     style={styles.btn}
                     onPress={submitForm}
                   >
-                    <Text style={styles.btnTitle}>Register</Text>
+                    <Text style={styles.btnTitle}>Sign up</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity activeOpacity={0.8}>
                     <Text style={styles.text}>
-                      Already have an account? To come in.
+                      Already have an account? Sign in.
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -190,7 +192,6 @@ const styles = StyleSheet.create({
     position: "relative",
     alignItems: "center",
     paddingTop: 92,
-    // paddingBottom: 45,
     backgroundColor: "#ffffff",
     borderTopStartRadius: 25,
     borderTopEndRadius: 25,
@@ -219,12 +220,12 @@ const styles = StyleSheet.create({
   },
 
   inputsWrapper: {
-    gap: 16,
     width: "100%",
   },
 
   input: {
     marginHorizontal: 16,
+
     padding: 16,
     height: 50,
     fontFamily: "Roboto-Regular",
