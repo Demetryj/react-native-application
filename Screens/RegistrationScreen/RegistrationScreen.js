@@ -106,6 +106,7 @@ export const RegistrationScreen = () => {
                   onChangeText={(value) =>
                     setDataForm((prevState) => ({ ...prevState, login: value }))
                   }
+                  onEndEditing={keyboardHide}
                 ></TextInput>
 
                 <TextInput
@@ -121,6 +122,7 @@ export const RegistrationScreen = () => {
                   onChangeText={(value) =>
                     setDataForm((prevState) => ({ ...prevState, email: value }))
                   }
+                  onEndEditing={keyboardHide}
                 ></TextInput>
 
                 <View style={{ position: "relative" }}>
@@ -141,6 +143,7 @@ export const RegistrationScreen = () => {
                         password: value,
                       }))
                     }
+                    onEndEditing={keyboardHide}
                   ></TextInput>
 
                   <TouchableOpacity
