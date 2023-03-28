@@ -88,6 +88,7 @@ export const LoginScreen = () => {
                   onChangeText={(value) =>
                     setDataForm((prevState) => ({ ...prevState, email: value }))
                   }
+                  onEndEditing={keyboardHide}
                 ></TextInput>
 
                 <View style={{ position: "relative" }}>
@@ -109,6 +110,7 @@ export const LoginScreen = () => {
                         password: value,
                       }))
                     }
+                    onEndEditing={keyboardHide}
                   ></TextInput>
 
                   <TouchableOpacity
